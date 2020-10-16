@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <nav>
+        Navigation
+        <ul>
+            <li><a href="#" class="nav-link">Link1</a></li>
+            <li><a href="#Was_kann_PHP?" class="nav-link">Was kann PHP?</a></li>
+            <li><a href="#" class="nav-link">Link3</a></li>
+            <li><a href="#" class="nav-link">Link4</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <h1>PHP Einführung</h1>
+        <section class="main-section">
+            <header>
+                <h2>Was ist PHP</h2>
+            </header>
+            <p>PHP (rekursives Akronym für PHP: Hypertext Preprocessor) ist eine weit verbreitete und für den allgemeinen Gebrauch bestimmte Open Source-Skriptsprache, welche speziell für die Webprogrammierung geeignet ist und in HTML eingebettet werden kann.</p>
+            <p>Nett, aber was heißt das genau? Ein Beispiel:</p>
+
+            <h3 class="listing">Beispiel #1 Ein einführendes Beispiel</h3>
+                <pre><code class="language-php">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Beispiel&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;?php
+            echo &quot;Hallo, ich bin ein PHP-Skript!&quot;;
+        ?&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <p>
+                Anstatt ein Programm mit vielen Anweisungen zur Ausgabe von HTML zu schreiben, schreibt man etwas HTML und bettet einige Anweisungen ein, die irgendetwas tun (wie hier &quot;Hallo, ich bin ein PHP-Skript!&quot; auszugeben). Der PHP-Code steht zwischen speziellen Anfangs- und Abschluss-Verarbeitungsinstruktionen &lt;?php und ?&gt;, mit denen man in den &quot;PHP-Modus&quot; und zur&uuml;ck wechseln kann.
+            </p>
+            <p>
+                PHP unterscheidet sich von clientseitigen Sprachen wie Javascript dadurch, dass der Code auf dem Server ausgef&uuml;hrt wird und dort HTML-Ausgaben generiert, die an den Client gesendet werden. Der Client erh&auml;lt also nur das Ergebnis der Skriptausf&uuml;hrung, ohne dass es m&ouml;glich ist herauszufinden, wie der eigentliche Code aussieht. Sie k&ouml;nnen Ihren Webserver auch anweisen, alle Ihre HTML-Dateien mit PHP zu parsen, denn dann gibt es wirklich nichts, das dem Benutzer sagt, was Sie in petto haben.
+            </p>
+            <p>
+                Das Beste an der Verwendung von PHP ist, dass es f&uuml;r Neueinsteiger extrem einfach ist, aber auch einen riesigen Funktionsumfang f&uuml;r den professionellen Programmierer bietet. Scheuen Sie sich nicht, die lange Liste der PHP-Funktionen zu lesen. Sie k&ouml;nnen einsteigen, und binnen weniger Stunden bereits mit dem Schreiben von einfachen Skripten beginnen.
+            </p>
+            <p>
+                Auch wenn die Entwicklung von PHP auf serverseitige Programmierung fokussiert ist, k&ouml;nnen Sie mit PHP weitaus mehr anstellen.
+            </p>
+            
+
+
+        </section>
+        <section id="Was_kann_PHP?" class="main-section">
+            <header>
+                <h2>Was kann PHP?</h2>
+            </header>
+            <p>
+                Alles. PHP ist hauptsächlich auf serverseitige Skripte fokussiert, weshalb Sie alles tun können, was auch ein anderes CGI-Programm kann, wie z.B. Formulardaten sammeln, dynamische Inhalte für Webseiten generieren oder Cookies senden und empfangen. Aber PHP kann noch viel mehr.
+            </p>
+            <p>
+                Mit PHP sind Sie nicht auf die Ausgabe von HTML beschränkt. Seine Fähigkeiten umfassen auch das dynamische Generieren von Bildern und PDF-Dateien.
+            </p>
+            <p>
+                Vielleicht die größte und bemerkenswerteste Stärke von PHP ist seine Unterstützung für eine breite Masse von Datenbanken. Eine datenbankgestützte Website zu erstellen ist mithilfe der Datenbankerweiterungen (z.B. für mysql) unglaublich einfach.
+            </p>
+        </section>
+        <section class="main-section">
+            <header>
+                <h2>Was brauche ich?</h2>
+            </header>
+            <p>
+                In diesem Tutorial gehen wir davon aus, dass auf Ihrem Server die PHP-Unterstützung aktiviert ist und dass die Dateiendung <i class="file-extension">.php</i> PHP zugeordnet ist. Auf den meisten Servern ist dies die Standardeinstellung für PHP-Dateien, aber fragen Sie bitte Ihren Server-Administrator, um sicherzugehen. Wenn Ihr Server PHP unterstützt, müssen Sie nichts machen. Erstellen Sie einfach Ihre <i class="file-extension">.php</i>-Dateien und legen Sie diese in Ihr Web-Verzeichnis - der Server wird sie dann für Sie parsen. Sie müssen nichts kompilieren und auch keine Zusatz-Tools installieren. Stellen Sie sich diese PHP-erweiterten Dateien wie normale HTML-Seiten mit einer ganzen Familie von "magischen" Tags, die Sie verschiedenste Dinge tun lassen, vor.
+            </p>
+            <p>
+                Angenommen, Sie möchten Bandbreite sparen und lokal entwickeln. In diesem Fall müssen Sie einen Webserver wie z.B. <a href="#" class="external-link">Apache</a> und natürlich <a href="#" class="external-link">PHP installieren</a>. Sehr empfehlenswert ist auch die Installation einer Datenbank wie z.B. <a href="#" class="external-link">MariaDB</a>.
+            </p>
+        </section>
+        <section class="main-section">
+            <header><h2>Huhu</h2></header>
+        </section>
+        <section class="main-section">
+            <header><h2>Huhu</h2></header>
+            <p>At least 10p elements</p>
+            <p>At least 10p elements</p>
+            <p>At least 10p elements</p>
+            <p>At least 10p elements</p>
+            <p>At least 10p elements</p>
+            <p>At least 10p elements</p>
+            <p>At least 10p elements</p>
+            <p>At least 10p elements</p>
+            <p>At least 10p elements</p>
+            <p>At least 10p elements</p>
+
+        </section>
+        <footer>
+            <p class="copyright-info">
+                Dieses Dokument "PHP Einführung" basiert auf ausgewählten Abschnitten des <a href="https://www.php.net/manual/de/" target="_blank">"PHP-Handbuch"</a> (Copyright © by the PHP Documentation Group) benutzt unter den Bedingungen der <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a> Lizenz. "PHP Einführung" ist mit <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> lizenziert von Fritz Pick.
+            </p>
+            
+        </footer>
+    </main>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-core.min.js" integrity="sha512-hqRrGU7ys5tkcqxx5FIZTBb7PkO2o3mU6U5+qB9b55kgMlBUT4J2wPwQfMCxeJW1fC8pBxuatxoH//z0FInhrA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-Q3qGP1uJL/B0sEmu57PKXjCirgPKMbg73OLRbTJ6lfHCVU5zkHqmcTI5EV2fSoPV1MHdKsCBE7m/aS6q0pPjRQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

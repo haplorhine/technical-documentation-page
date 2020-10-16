@@ -1,0 +1,135 @@
+:root {
+    --width-nav-desktop: 250px;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+nav {
+    background: rgb(133, 193, 193);
+    height: 200px;
+    overflow: auto;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+}
+
+li .nav-link {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.nav-link:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+li:first-child .nav-link {
+    border-top: 1px solid;
+}
+
+@media screen and (min-width: 600px) {
+    nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: var(--width-nav-desktop);
+        height: auto;
+        padding-top: 50px;
+    }
+    main {
+        margin-left: var(--width-nav-desktop);
+    }
+}
+
+main {
+    padding: 1em;
+}
+
+.main-section p {
+    line-height: 1.5em;
+}
+
+pre {
+    border-radius: .2em;
+}
+
+.copyright-info {
+    font-size: .9em;
+    text-align: center;
+    line-height: 1.5em;
+    margin: 0 5em;
+}
+
+.cc-by {
+    display: block;
+    margin: 0 auto;
+}
+
+.cc-by-inline {
+    height: 1em;
+    display: inline;
+    position: relative;
+    top: .07em;
+}
+
+
+.file-extension {
+    font-size: 1em;
+    font-family: monospace;
+    padding: .2em .4em .2em .2em;
+    background: #d3d0ff;
+    color: black;
+    border-radius: .1em;
+}
+
+a {
+    text-decoration: none;
+    color: darkcyan;
+    border-bottom: 1px solid;
+}
+
+.external-link::before {
+    content: "» ";
+}
+/**********************************
+Prevent hash tag linked section
+to disappear under fixed navigation
+
+Snippet adapted from CSS-tricks
+(https://css-tricks.com/hash-tag-links-padding/)
+************************************/
+.jumplink::before {
+    display: block; 
+    content: " "; 
+    margin-top: -8em; 
+    height: 8em; 
+    visibility: hidden; 
+    pointer-events: none;
+  }
+
+  @media screen and (min-width: 477px) {
+    .jumplink::before {
+        margin-top: -5em; 
+        height: 5em; 
+      }
+  }
