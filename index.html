@@ -10,103 +10,195 @@
     <title>Technical Documentation Page</title>
 </head>
 <body>
-    <nav>
-        Navigation
+    <nav id="navbar">
+        <header><h1>PHP Einführung</h1></header>
         <ul>
-            <li><a href="#" class="nav-link">Link1</a></li>
+            <li><a href="#Was_ist_PHP?" class="nav-link">Was ist PHP?</a></li>
             <li><a href="#Was_kann_PHP?" class="nav-link">Was kann PHP?</a></li>
-            <li><a href="#" class="nav-link">Link3</a></li>
-            <li><a href="#" class="nav-link">Link4</a></li>
+            <li><a href="#Was_brauche_ich?" class="nav-link">Was brauche ich?</a></li>
+            <li><a href="#Ihre_erste_PHP-erweiterte_Seite" class="nav-link">Ihre erste PHP-erweiterte Seite</a></li>
         </ul>
     </nav>
     <main id="main-doc">
-        <h1>PHP Einführung</h1>
-        <section class="main-section">
-            <header>
-                <h2>Was ist PHP</h2>
-            </header>
-            <p>PHP (rekursives Akronym für PHP: Hypertext Preprocessor) ist eine weit verbreitete und für den allgemeinen Gebrauch bestimmte Open Source-Skriptsprache, welche speziell für die Webprogrammierung geeignet ist und in HTML eingebettet werden kann.</p>
-            <p>Nett, aber was heißt das genau? Ein Beispiel:</p>
-
-            <h3 class="listing">Beispiel #1 Ein einführendes Beispiel</h3>
-                <pre><code class="language-php">&lt;!DOCTYPE html&gt;
+        <div class="wrapper">
+            <section id="Was_ist_PHP?" class="main-section jumplink">
+                <header>
+                    <h2>Was ist PHP?</h2>
+                </header>
+                <p>PHP (rekursives Akronym für PHP: Hypertext Preprocessor) ist eine weit verbreitete und für den allgemeinen Gebrauch bestimmte Open Source-Skriptsprache, welche speziell für die Webprogrammierung geeignet ist und in HTML eingebettet werden kann.</p>
+                <p>Nett, aber was heißt das genau? Ein Beispiel:</p>
+    
+                <h3 class="listing">Beispiel #1 Ein einführendes Beispiel</h3>
+                    <pre><code class="language-php">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Beispiel&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
+&lt;head&gt;
+    &lt;title&gt;Beispiel&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
 
-        &lt;?php
-            echo &quot;Hallo, ich bin ein PHP-Skript!&quot;;
-        ?&gt;
+    &lt;?php
+        echo &quot;Hallo, ich bin ein PHP-Skript!&quot;;
+    ?&gt;
 
-    &lt;/body&gt;
+&lt;/body&gt;
 &lt;/html&gt;</code></pre>
+    
+                <p>
+                    Anstatt ein Programm mit vielen Anweisungen zur Ausgabe von HTML zu schreiben, schreibt man etwas HTML und bettet einige Anweisungen ein, die irgendetwas tun (wie hier &quot;Hallo, ich bin ein PHP-Skript!&quot; auszugeben). Der PHP-Code steht zwischen speziellen Anfangs- und Abschluss-Verarbeitungsinstruktionen &lt;?php und ?&gt;, mit denen man in den &quot;PHP-Modus&quot; und zur&uuml;ck wechseln kann.
+                </p>
+                <p>
+                    PHP unterscheidet sich von clientseitigen Sprachen wie Javascript dadurch, dass der Code auf dem Server ausgef&uuml;hrt wird und dort HTML-Ausgaben generiert, die an den Client gesendet werden. Der Client erh&auml;lt also nur das Ergebnis der Skriptausf&uuml;hrung, ohne dass es m&ouml;glich ist herauszufinden, wie der eigentliche Code aussieht. Sie k&ouml;nnen Ihren Webserver auch anweisen, alle Ihre HTML-Dateien mit PHP zu parsen, denn dann gibt es wirklich nichts, das dem Benutzer sagt, was Sie in petto haben.
+                </p>
+                <p>
+                    Das Beste an der Verwendung von PHP ist, dass es f&uuml;r Neueinsteiger extrem einfach ist, aber auch einen riesigen Funktionsumfang f&uuml;r den professionellen Programmierer bietet. Scheuen Sie sich nicht, die lange Liste der PHP-Funktionen zu lesen. Sie k&ouml;nnen einsteigen, und binnen weniger Stunden bereits mit dem Schreiben von einfachen Skripten beginnen.
+                </p>
+                <p>
+                    Auch wenn die Entwicklung von PHP auf serverseitige Programmierung fokussiert ist, k&ouml;nnen Sie mit PHP weitaus mehr anstellen.
+                </p>
+                
+    
+    
+            </section>
+            <section id="Was_kann_PHP?" class="main-section jumplink">
+                <header>
+                    <h2>Was kann PHP?</h2>
+                </header>
+                <p>
+                    Alles. PHP ist hauptsächlich auf serverseitige Skripte fokussiert, weshalb Sie alles tun können, was auch ein anderes CGI-Programm kann, wie z.B. Formulardaten sammeln, dynamische Inhalte für Webseiten generieren oder Cookies senden und empfangen. Aber PHP kann noch viel mehr.
+                </p>
+                <p>
+                    Mit PHP sind Sie nicht auf die Ausgabe von HTML beschränkt. Seine Fähigkeiten umfassen auch das dynamische Generieren von Bildern und PDF-Dateien.
+                </p>
+                <p>
+                    Vielleicht die größte und bemerkenswerteste Stärke von PHP ist seine Unterstützung für eine breite Masse von Datenbanken. Eine datenbankgestützte Website zu erstellen ist mithilfe der Datenbankerweiterungen (z.B. für mysql) unglaublich einfach.
+                </p>
+            </section>
+            <section class="main-section">
+                <header>
+                    <h2>Was brauche ich?</h2>
+                </header>
+                <p>
+                    In diesem Tutorial gehen wir davon aus, dass auf Ihrem Server die PHP-Unterstützung aktiviert ist und dass die Dateiendung <i class="file-extension">.php</i> PHP zugeordnet ist. Auf den meisten Servern ist dies die Standardeinstellung für PHP-Dateien, aber fragen Sie bitte Ihren Server-Administrator, um sicherzugehen. Wenn Ihr Server PHP unterstützt, müssen Sie nichts machen. Erstellen Sie einfach Ihre <i class="file-extension">.php</i>-Dateien und legen Sie diese in Ihr Web-Verzeichnis - der Server wird sie dann für Sie parsen. Sie müssen nichts kompilieren und auch keine Zusatz-Tools installieren. Stellen Sie sich diese PHP-erweiterten Dateien wie normale HTML-Seiten mit einer ganzen Familie von "magischen" Tags, die Sie verschiedenste Dinge tun lassen, vor.
+                </p>
+                <p>
+                    Angenommen, Sie möchten Bandbreite sparen und lokal entwickeln. In diesem Fall müssen Sie einen Webserver wie z.B. <a href="#" class="external-link">Apache</a> und natürlich <a href="#" class="external-link">PHP installieren</a>. Sehr empfehlenswert ist auch die Installation einer Datenbank wie z.B. <a href="#" class="external-link">MariaDB</a>.
+                </p>
+            </section>
+            <section id="Ihre_erste_PHP-erweiterte_Seite" class="main-section jumplink">
+                <header>
+                    <h2>Ihre erste PHP-erweiterte Seite</h2>
+                </header>
+                <p>
+                    Erstellen Sie eine Datei mit dem Namen <i class="file-name">hallo.php</i> und speichern Sie diese im Root-Verzeichnis Ihres Webservers (<i class="tech-term">DOCUMENT_ROOT</i>) mit dem folgenden Inhalt:
+                </p>
+                <h3 class="listing">Beispiel #1 Unser erstes PHP-Skript: hallo.php</h3>
+                <pre><code class="language-php">&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;PHP-Test&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;?php echo '&lt;p&gt;Hallo Welt&lt;/p&gt;'; ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <p>
+                    Benutzen Sie Ihren Browser, um die Datei über den Webserver-URL aufzurufen. Der URL muss mit /hallo.php enden. Wenn Sie lokal entwickeln, sieht der URL z.B. so aus: http://localhost/hallo.php oder http://127.0.0.1/hallo.php - andere Adressen sind aber, abhängig vom Webserver, auch möglich. Wenn Sie alles korrekt installiert haben, wird die Datei von PHP geparst und Sie werden die folgende Ausgabe in Ihrem Browser sehen:
+                </p>
+                <pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;PHP-Test&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Hallo Welt&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <p>
+                    Das Beispiel ist extrem einfach und natürlich brauchen Sie PHP nicht, um eine Seite wie diese zu erstellen. Denn es macht nicht mehr, als Hallo Welt mit der echo-Anweisung von PHP auszugeben. Bitte beachten Sie, dass die Datei nicht ausführbar sein muss. Der Server erkennt anhand der Dateiendung <i class="file-extension">.php</i>, dass sie durch PHP interpretiert werden muss. Stellen Sie sich eine normale HTML-Datei vor, die eine Menge von speziellen Tags enthält, mit denen Sie einige interessante Dinge tun können.
+                </p>
+                <p>
+                    Der wichtigste Punkt im Beispiel ist, Ihnen das spezielle PHP Tag-Format zu zeigen. Im Beispiel wurde <code class="tech-term">&lt;?php</code> verwendet, um den Beginn eines PHP-Tags zu kennzeichnen. Anschließend folgte die PHP-Anweisung. Mit dem schließenden Tag, <code class="tech-term">?&gt;</code>, wurde der PHP-Modus wieder verlassen. Sie können an jeder Stelle und so oft Sie wollen, in den PHP-Modus wechseln und ihn wieder verlassen.
+                </p>
+                <p>
+                    Nachdem Sie jetzt erfolgreich ein einfaches, funktionierendes PHP-Skript geschrieben haben, wird es Zeit, das berühmteste PHP-Skript zu schreiben. Rufen Sie die Funktion phpinfo() auf und Sie bekommen viele nützliche Informationen über Ihr System und Ihre Installation wie z.B. die verfügbaren vordefinierten Variablen, die geladenen PHP-Module und die Konfigurations-Einstellungen. Nehmen Sie sich etwas Zeit und schauen Sie sich diese wichtigen Informationen an.
+                </p>
+                <h3 class="listing">
+                    Beispiel #2 Anzeigen von Systeminformationen mit PHP
+                </h3>
+                <pre><code class="language-php">&lt;?php phpinfo(); ?&gt;</code></pre>
+            </section>
+            <section id="Was_brauche_ich?" class="main-section jumplink">
+                <header>
+                    <h2>Formulare verarbeiten</h2>
+                </header>
+                <p>
+                    Eine der mächtigsten Funktionen von PHP ist die Art, wie HTML-Formulare verarbeitet werden. Sie sollten wissen, dass jedes Element eines Formulars automatisch in Ihren PHP-Skripts verfügbar ist. Bitte lesen Sie die Seite Variablen aus externen Quellen für weitere Informationen und Beispiele über das Benutzen von Formularen mit PHP. Hier ist ein Beispiel-HTML-Formular:
+                </p>
+                <h3 class="listing">Beispiel #1 Ein einfaches HTML-Formular</h3>
+                <pre><code class="language-html">&lt;form action=&quot;action.php&quot; method=&quot;post&quot;&gt;
+    &lt;p&gt;Ihr Name: &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;Ihr Alter: &lt;input type=&quot;text&quot; name=&quot;alter&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;input type=&quot;submit&quot; /&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+                <h3 class="listing">Beispiel #2 Daten des Formulars ausgeben</h3>
+                <pre><code class="language-php">Hallo &lt;?php echo htmlspecialchars($_POST['name']); ?&gt;.
+Sie sind &lt;?php echo (int)$_POST['alter']; ?&gt; Jahre alt.</code></pre>
+                <p>
+                    Die Ausgabe des Skripts könnte dann so aussehen:
+                </p>
+                <pre class="output">Hallo Joe. Sie sind 22 Jahre alt.</pre>
+                <p>
+                    Abgesehen von dem <i class="tech-term">htmlspecialchars()</i>-Aufruf und dem (int) Cast sollte einfach zu verstehen sein, was hier geschieht. <i class="tech-term">htmlspecialchars()</i> stellt sicher, dass die Zeichen, die in HTML eine spezielle Bedeutung haben, ordentlich codiert werden, sodass niemand HTML Tags oder Javascript-Code in Ihre Seite einschmuggeln kann. Da wir wissen, dass das "alter" Feld eine Zahl enthalten soll, konvertieren wir es in einen integer Wert, wodurch automatisch überflüssige Zeichen entfernt werden. Sie können diese Aufgabe auch PHP überlassen, indem Sie die Filter Extension benutzen. Die Variablen <var class="tech-term">$_POST['name']</var> und <var class="tech-term">$_POST['alter']</var> werden für Sie automatisch von PHP gesetzt. Weiter oben haben wir das superglobale Array <var class="tech-term">$_SERVER</var> eingeführt, jetzt benutzen wir hier das - ebenfalls superglobale - Array <var class="tech-term">$_POST</var>, welches alle POST-Daten enthält. Beachten Sie, dass die im Formular verwendete Methode POST ist. Hätten wir GET verwendet, wären die Daten unseres Formulars stattdessen im superglobalen Array <var class="tech-term">$_GET verfügbar</var>. Sie können auch das superglobale Array <var class="tech-term">$_REQUEST</var> benutzen, wenn die Quelle der Daten keine Rolle spielt. Dieses Array enthält die GET-, POST- und COOKIE-Daten.
+                </p>
+            </section>
+            <section id="Was_brauche_ich?" class="main-section jumplink">
+                <header>
+                    <h2>Typen</h2>
+                </header>
 
-            <p>
-                Anstatt ein Programm mit vielen Anweisungen zur Ausgabe von HTML zu schreiben, schreibt man etwas HTML und bettet einige Anweisungen ein, die irgendetwas tun (wie hier &quot;Hallo, ich bin ein PHP-Skript!&quot; auszugeben). Der PHP-Code steht zwischen speziellen Anfangs- und Abschluss-Verarbeitungsinstruktionen &lt;?php und ?&gt;, mit denen man in den &quot;PHP-Modus&quot; und zur&uuml;ck wechseln kann.
-            </p>
-            <p>
-                PHP unterscheidet sich von clientseitigen Sprachen wie Javascript dadurch, dass der Code auf dem Server ausgef&uuml;hrt wird und dort HTML-Ausgaben generiert, die an den Client gesendet werden. Der Client erh&auml;lt also nur das Ergebnis der Skriptausf&uuml;hrung, ohne dass es m&ouml;glich ist herauszufinden, wie der eigentliche Code aussieht. Sie k&ouml;nnen Ihren Webserver auch anweisen, alle Ihre HTML-Dateien mit PHP zu parsen, denn dann gibt es wirklich nichts, das dem Benutzer sagt, was Sie in petto haben.
-            </p>
-            <p>
-                Das Beste an der Verwendung von PHP ist, dass es f&uuml;r Neueinsteiger extrem einfach ist, aber auch einen riesigen Funktionsumfang f&uuml;r den professionellen Programmierer bietet. Scheuen Sie sich nicht, die lange Liste der PHP-Funktionen zu lesen. Sie k&ouml;nnen einsteigen, und binnen weniger Stunden bereits mit dem Schreiben von einfachen Skripten beginnen.
-            </p>
-            <p>
-                Auch wenn die Entwicklung von PHP auf serverseitige Programmierung fokussiert ist, k&ouml;nnen Sie mit PHP weitaus mehr anstellen.
-            </p>
-            
+
+                <p>
+                    PHP unterstützt zehn primitive Typen.
+                </p>
+                <p>
+                    Vier skalare Typen:
+                </p>
+
+                <ul>
+                    <li>Boolean</li>
+                    <li>Integer</li>
+                    <li>Fließkomma-Zahl (float) (auch double)</li>
+                    <li>String / Zeichenkette</li>
+                </ul>
+                <p>
+                    Vier zusammengesetzte Typen:
+                </p>
+
+                <ul>
+                    <li>Array</li>
+                    <li>Objekt</li>
+                    <li>Callable</li>
+                    <li>Iterable</li>
+                </ul>
+                <p>
+                    Und zuletzt zwei spezielle Typen:
+                </p>
+
+                <ul>
+                    <li>Ressource</li>
+                    <li>NULL</li>
+                </ul>
+            </section>
+           
 
 
-        </section>
-        <section id="Was_kann_PHP?" class="main-section">
-            <header>
-                <h2>Was kann PHP?</h2>
-            </header>
-            <p>
-                Alles. PHP ist hauptsächlich auf serverseitige Skripte fokussiert, weshalb Sie alles tun können, was auch ein anderes CGI-Programm kann, wie z.B. Formulardaten sammeln, dynamische Inhalte für Webseiten generieren oder Cookies senden und empfangen. Aber PHP kann noch viel mehr.
-            </p>
-            <p>
-                Mit PHP sind Sie nicht auf die Ausgabe von HTML beschränkt. Seine Fähigkeiten umfassen auch das dynamische Generieren von Bildern und PDF-Dateien.
-            </p>
-            <p>
-                Vielleicht die größte und bemerkenswerteste Stärke von PHP ist seine Unterstützung für eine breite Masse von Datenbanken. Eine datenbankgestützte Website zu erstellen ist mithilfe der Datenbankerweiterungen (z.B. für mysql) unglaublich einfach.
-            </p>
-        </section>
-        <section class="main-section">
-            <header>
-                <h2>Was brauche ich?</h2>
-            </header>
-            <p>
-                In diesem Tutorial gehen wir davon aus, dass auf Ihrem Server die PHP-Unterstützung aktiviert ist und dass die Dateiendung <i class="file-extension">.php</i> PHP zugeordnet ist. Auf den meisten Servern ist dies die Standardeinstellung für PHP-Dateien, aber fragen Sie bitte Ihren Server-Administrator, um sicherzugehen. Wenn Ihr Server PHP unterstützt, müssen Sie nichts machen. Erstellen Sie einfach Ihre <i class="file-extension">.php</i>-Dateien und legen Sie diese in Ihr Web-Verzeichnis - der Server wird sie dann für Sie parsen. Sie müssen nichts kompilieren und auch keine Zusatz-Tools installieren. Stellen Sie sich diese PHP-erweiterten Dateien wie normale HTML-Seiten mit einer ganzen Familie von "magischen" Tags, die Sie verschiedenste Dinge tun lassen, vor.
-            </p>
-            <p>
-                Angenommen, Sie möchten Bandbreite sparen und lokal entwickeln. In diesem Fall müssen Sie einen Webserver wie z.B. <a href="#" class="external-link">Apache</a> und natürlich <a href="#" class="external-link">PHP installieren</a>. Sehr empfehlenswert ist auch die Installation einer Datenbank wie z.B. <a href="#" class="external-link">MariaDB</a>.
-            </p>
-        </section>
-        <section class="main-section">
-            <header><h2>Huhu</h2></header>
-        </section>
-        <section class="main-section">
-            <header><h2>Huhu</h2></header>
-            <p>At least 10p elements</p>
-            <p>At least 10p elements</p>
-            <p>At least 10p elements</p>
-            <p>At least 10p elements</p>
-            <p>At least 10p elements</p>
-            <p>At least 10p elements</p>
-            <p>At least 10p elements</p>
-            <p>At least 10p elements</p>
-            <p>At least 10p elements</p>
-            <p>At least 10p elements</p>
-
-        </section>
-        <footer>
-            <p class="copyright-info">
-                Dieses Dokument "PHP Einführung" basiert auf ausgewählten Abschnitten des <a href="https://www.php.net/manual/de/" target="_blank">"PHP-Handbuch"</a> (Copyright © by the PHP Documentation Group) benutzt unter den Bedingungen der <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a> Lizenz. "PHP Einführung" ist mit <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> lizenziert von Fritz Pick.
-            </p>
-            
-        </footer>
+            <footer>
+                <p class="copyright-info">
+                    Dieses Dokument "PHP Einführung" basiert auf ausgewählten Abschnitten des <a href="https://www.php.net/manual/de/" target="_blank">"PHP-Handbuch"</a> (Copyright © by the PHP Documentation Group) benutzt unter den Bedingungen der <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a> Lizenz. "PHP Einführung" ist mit <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> lizenziert von Fritz Pick.
+                    <br>
+                    Achtung diese Website ist ein Übungsprojekt im Zuge der Bearbeitung des freeCodeCamp-Curriculums ("technical documentation page") und keine sinnvolle PHP Einführung.
+                </p>
+                
+            </footer>
+        </div>
     </main>
 
 

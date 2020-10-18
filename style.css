@@ -1,5 +1,7 @@
 :root {
-    --width-nav-desktop: 250px;
+    --width-nav-desktop: 300px;
+    --main-color-scheme: #ffa623;
+    --big-border: 1.5em;
   }
 
 * {
@@ -12,12 +14,16 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
+    background: var(--main-color-scheme);
 }
 
 nav {
-    background: rgb(133, 193, 193);
-    height: 200px;
+    background: var(--main-color-scheme);
     overflow: auto;
+}
+
+nav h1 {
+    text-align: center;
 }
 
 nav ul {
@@ -32,7 +38,7 @@ nav li {
 
 li .nav-link {
     font-size: 1.2em;
-    color: white;
+    color: black;
     text-decoration: none;
     width: 100%;
     text-align: center;
@@ -47,6 +53,15 @@ li:first-child .nav-link {
     border-top: 1px solid;
 }
 
+main {
+    padding: 1em;
+    background: white;
+}
+
+.wrapper {
+    max-width: 1000px;
+}
+
 @media screen and (min-width: 600px) {
     nav {
         position: fixed;
@@ -54,15 +69,35 @@ li:first-child .nav-link {
         bottom: 0;
         width: var(--width-nav-desktop);
         height: auto;
-        padding-top: 50px;
+        padding-top: 1em;
     }
     main {
         margin-left: var(--width-nav-desktop);
+        margin-right: var(--big-border);
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        padding: calc(var(--big-border) + 1em) 1em;
     }
-}
-
-main {
-    padding: 1em;
+    main::before {
+        content: "";
+        height: var(--big-border);
+        background: var(--main-color-scheme);
+        position: fixed;
+        border-bottom: 1px solid black;
+        top: 0;
+        left: 300px;
+        right: var(--big-border);
+    }
+    main::after {
+        content: "";
+        height: var(--big-border);
+        background: var(--main-color-scheme);
+        position: fixed;
+        border-top: 1px solid black;
+        bottom: 0;
+        left: 300px;
+        right: var(--big-border);
+    }
 }
 
 .main-section p {
@@ -71,6 +106,18 @@ main {
 
 pre {
     border-radius: .2em;
+}
+
+/******************************************
+The font-stack of the output class has been
+adapted from prismjs "tomorrow" theme.
+*******************************************/
+.output {
+    background: rgb(235, 235, 235);
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 .copyright-info {
@@ -93,13 +140,18 @@ pre {
 }
 
 
-.file-extension {
+.file-extension, .file-name, .tech-term {
+    font-style: normal;
     font-size: 1em;
     font-family: monospace;
     padding: .2em .4em .2em .2em;
     background: #d3d0ff;
     color: black;
     border-radius: .1em;
+}
+
+.file-name, .tech-term {
+    padding-right: .2em;
 }
 
 a {
@@ -111,25 +163,26 @@ a {
 .external-link::before {
     content: "» ";
 }
-/**********************************
-Prevent hash tag linked section
-to disappear under fixed navigation
 
-Snippet adapted from CSS-tricks
-(https://css-tricks.com/hash-tag-links-padding/)
-************************************/
-.jumplink::before {
-    display: block; 
-    content: " "; 
-    margin-top: -8em; 
-    height: 8em; 
-    visibility: hidden; 
-    pointer-events: none;
-  }
 
-  @media screen and (min-width: 477px) {
+
+  @media screen and (min-width: 600px) {
+    /**********************************
+    Prevent hash tag linked section
+    to disappear under the big-border^^
+
+    Snippet adapted from CSS-tricks
+    (https://css-tricks.com/hash-tag-links-padding/)
+    ************************************/
+    section.jumplink h2 {
+        margin-top: 0;
+    }
     .jumplink::before {
-        margin-top: -5em; 
-        height: 5em; 
+        display: block; 
+        content: " "; 
+        margin-top: calc(-1*var(--big-border) - 1em); 
+        height: calc(var(--big-border) + 1em); 
+        visibility: hidden; 
+        pointer-events: none;
       }
   }
