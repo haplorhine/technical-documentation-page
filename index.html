@@ -17,6 +17,8 @@
             <li><a href="#Was_kann_PHP?" class="nav-link">Was kann PHP?</a></li>
             <li><a href="#Was_brauche_ich?" class="nav-link">Was brauche ich?</a></li>
             <li><a href="#Ihre_erste_PHP-erweiterte_Seite" class="nav-link">Ihre erste PHP-erweiterte Seite</a></li>
+            <li><a href="#Formulare_verarbeiten" class="nav-link">Formulare verarbeiten</a></li>
+            <li><a href="#Typen" class="nav-link">Typen</a></li>
         </ul>
     </nav>
     <main id="main-doc">
@@ -73,7 +75,7 @@
                     Vielleicht die größte und bemerkenswerteste Stärke von PHP ist seine Unterstützung für eine breite Masse von Datenbanken. Eine datenbankgestützte Website zu erstellen ist mithilfe der Datenbankerweiterungen (z.B. für mysql) unglaublich einfach.
                 </p>
             </section>
-            <section class="main-section">
+            <section id="Was_brauche_ich?" class="main-section jumplink">
                 <header>
                     <h2>Was brauche ich?</h2>
                 </header>
@@ -125,7 +127,7 @@
                 </h3>
                 <pre><code class="language-php">&lt;?php phpinfo(); ?&gt;</code></pre>
             </section>
-            <section id="Was_brauche_ich?" class="main-section jumplink">
+            <section id="Formulare_verarbeiten" class="main-section jumplink">
                 <header>
                     <h2>Formulare verarbeiten</h2>
                 </header>
@@ -149,7 +151,7 @@ Sie sind &lt;?php echo (int)$_POST['alter']; ?&gt; Jahre alt.</code></pre>
                     Abgesehen von dem <i class="tech-term">htmlspecialchars()</i>-Aufruf und dem (int) Cast sollte einfach zu verstehen sein, was hier geschieht. <i class="tech-term">htmlspecialchars()</i> stellt sicher, dass die Zeichen, die in HTML eine spezielle Bedeutung haben, ordentlich codiert werden, sodass niemand HTML Tags oder Javascript-Code in Ihre Seite einschmuggeln kann. Da wir wissen, dass das "alter" Feld eine Zahl enthalten soll, konvertieren wir es in einen integer Wert, wodurch automatisch überflüssige Zeichen entfernt werden. Sie können diese Aufgabe auch PHP überlassen, indem Sie die Filter Extension benutzen. Die Variablen <var class="tech-term">$_POST['name']</var> und <var class="tech-term">$_POST['alter']</var> werden für Sie automatisch von PHP gesetzt. Weiter oben haben wir das superglobale Array <var class="tech-term">$_SERVER</var> eingeführt, jetzt benutzen wir hier das - ebenfalls superglobale - Array <var class="tech-term">$_POST</var>, welches alle POST-Daten enthält. Beachten Sie, dass die im Formular verwendete Methode POST ist. Hätten wir GET verwendet, wären die Daten unseres Formulars stattdessen im superglobalen Array <var class="tech-term">$_GET verfügbar</var>. Sie können auch das superglobale Array <var class="tech-term">$_REQUEST</var> benutzen, wenn die Quelle der Daten keine Rolle spielt. Dieses Array enthält die GET-, POST- und COOKIE-Daten.
                 </p>
             </section>
-            <section id="Was_brauche_ich?" class="main-section jumplink">
+            <section id="Typen" class="main-section jumplink">
                 <header>
                     <h2>Typen</h2>
                 </header>
