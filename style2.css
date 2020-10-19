@@ -1,6 +1,6 @@
 :root {
     --width-nav-desktop: 300px;
-    --main-color-scheme: #90cbc5/*rgb(136, 215, 165)*/;
+    --main-color-scheme: rgb(76 175 174)/*#90cbc5*/;
     --big-border: 1.5em;
   }
 
@@ -25,6 +25,12 @@ nav h1 {
     text-align: center;
 }
 
+nav h1 a {
+    color: black;
+    border: 0;
+    
+}
+
 nav ul {
     padding: 0;
     margin: 0;
@@ -36,21 +42,23 @@ nav li {
     list-style-type: none;
     display: flex;
     width: 100%;
-    border-bottom: .2rem solid rgba(0,0,0,.5);
+    margin-bottom: 4px;
     padding: 0;
 }
 
 li .nav-link {
-    font-size: 1.2em;
+    font-size: 1em;
+    font-weight: 200;
     color: black;
     text-decoration: none;
     width: 100%;
     text-align: center;
-    padding: .5em 0;
+    padding: .7rem 0;
     border: 0;
+    background: rgba(0,0,0,.1);
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link:focus {
     background: rgba(0, 0, 0, .2);
 }
 
@@ -74,12 +82,25 @@ main {
         bottom: 0;
         width: var(--width-nav-desktop);
         height: auto;
-        padding-top: 1em;
         margin: 1em;
-        border-radius: .5em;
+        padding-top: 5em;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+    }
+    nav header {
+        width: var(--width-nav-desktop);
+        height: 5em;
+        position: fixed;
+        display: flex;
+        margin-top: -5em;
+        background: var(--main-color-scheme);
+        border-radius: 5px 5px 0 0;
+    }
+    nav h1 {
+        margin: auto;
     }
     nav ul {
-        height: 80vh;
+        height: auto;
     }
     main {
         margin-left: calc(var(--width-nav-desktop) + 1em);
@@ -164,12 +185,11 @@ adapted from prismjs "tomorrow" theme.
 
 a {
     text-decoration: none;
-    color: darkcyan;
     border-bottom: 1px solid;
 }
 
 .external-link::before {
-    content: "» ";
+    content: "Â» ";
 }
 
 
