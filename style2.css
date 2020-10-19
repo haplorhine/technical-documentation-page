@@ -1,6 +1,6 @@
 :root {
     --width-nav-desktop: 300px;
-    --main-color-scheme: #ffa723/*rgb(136, 215, 165)*/;
+    --main-color-scheme: #90cbc5/*rgb(136, 215, 165)*/;
     --big-border: 1.5em;
   }
 
@@ -14,12 +14,11 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background: var(--main-color-scheme);
 }
 
 nav {
-    background: var(--main-color-scheme);
     overflow: auto;
+    background: var(--main-color-scheme);
 }
 
 nav h1 {
@@ -37,6 +36,8 @@ nav li {
     list-style-type: none;
     display: flex;
     width: 100%;
+    border-bottom: .2rem solid rgba(0,0,0,.5);
+    padding: 0;
 }
 
 li .nav-link {
@@ -45,14 +46,15 @@ li .nav-link {
     text-decoration: none;
     width: 100%;
     text-align: center;
-    padding: 1em 0;
+    padding: .5em 0;
+    border: 0;
 }
 
 .nav-link:hover {
     background: rgba(0, 0, 0, .2);
 }
 
-li:last-child .nav-link {
+li:last-child {
     border-bottom: 0;
 }
 
@@ -73,19 +75,19 @@ main {
         width: var(--width-nav-desktop);
         height: auto;
         padding-top: 1em;
+        margin: 1em;
+        border-radius: .5em;
     }
     nav ul {
         height: 80vh;
     }
     main {
-        margin-left: var(--width-nav-desktop);
+        margin-left: calc(var(--width-nav-desktop) + 1em);
         margin-right: var(--big-border);
-        border-left: 1px solid black;
-        border-right: 1px solid black;
         padding: calc(var(--big-border) + 1em) 1em;
     }
     main::before {
-        content: "";
+        /* content: ""; */
         height: var(--big-border);
         background: var(--main-color-scheme);
         position: fixed;
@@ -95,7 +97,7 @@ main {
         right: var(--big-border);
     }
     main::after {
-        content: "";
+        /* content: ""; */
         height: var(--big-border);
         background: var(--main-color-scheme);
         position: fixed;
@@ -184,11 +186,11 @@ a {
         margin-top: 0;
     }
     .jumplink::before {
-        display: block; 
-        content: " "; 
-        margin-top: calc(-1*var(--big-border) - 1em); 
-        height: calc(var(--big-border) + 1em); 
-        visibility: hidden; 
+        display: block;
+        content: " ";
+        margin-top: -1em;
+        height: 1em;
+        visibility: hidden;
         pointer-events: none;
       }
   }
