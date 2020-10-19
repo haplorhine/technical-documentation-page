@@ -1,6 +1,6 @@
 :root {
     --width-nav-desktop: 300px;
-    --main-color-scheme: #ffa623;
+    --main-color-scheme: #ffa623/*rgb(136, 215, 165)*/;
     --big-border: 1.5em;
   }
 
@@ -28,6 +28,9 @@ nav h1 {
 
 nav ul {
     padding: 0;
+    margin: 0;
+    height: 200px;
+    overflow: auto;
 }
 
 nav li {
@@ -49,8 +52,8 @@ li .nav-link {
     background: rgba(0, 0, 0, .2);
 }
 
-li:first-child .nav-link {
-    border-top: 1px solid;
+li:last-child .nav-link {
+    border-bottom: 0;
 }
 
 main {
@@ -70,6 +73,9 @@ main {
         width: var(--width-nav-desktop);
         height: auto;
         padding-top: 1em;
+    }
+    nav ul {
+        height: 80vh;
     }
     main {
         margin-left: var(--width-nav-desktop);
