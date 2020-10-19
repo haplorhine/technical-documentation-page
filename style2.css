@@ -1,7 +1,6 @@
 :root {
     --width-nav-desktop: 300px;
     --main-color-scheme: rgb(76 175 174)/*#90cbc5*/;
-    --big-border: 1.5em;
   }
 
 * {
@@ -104,8 +103,6 @@ main {
     }
     main {
         margin-left: calc(var(--width-nav-desktop) + 1em);
-        margin-right: var(--big-border);
-        padding: calc(var(--big-border) + 1em) 1em;
     }
     main::before {
         /* content: ""; */
@@ -189,7 +186,7 @@ a {
 }
 
 .external-link::before {
-    content: "Â» ";
+    content: "» ";
 }
 
 
